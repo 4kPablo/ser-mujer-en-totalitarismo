@@ -15,36 +15,36 @@ import { Calendar, Clock, MapPin } from "lucide-react";
 const talleres = [
   {
     title: "Democracia y Totalitarismo",
-    image: "public/Taller_1.jpg",
+    image: "/Taller_1.jpg",
     description:
       "Análisis comparativo entre sistemas democráticos y totalitarios.",
   },
   {
     title: "Ser Mujer en la Italia fascista",
-    image: "public/Taller_2.jpg",
+    image: "/Taller_2.jpg",
     description:
       "Exploración del rol de la mujer durante el régimen fascista de Mussolini.",
   },
   {
     title: "Ser Mujer en la Alemania Nazi",
-    image: "public/Taller_3.jpg",
+    image: "/Taller_3.jpg",
     description:
       "Análisis de la situación de las mujeres bajo el Tercer Reich.",
   },
   {
     title: "Ser Mujer bajo el Franquismo español",
-    image: "public/Taller_4.jpg",
+    image: "/Taller_4.jpg",
     description:
       "Estudio de la vida de las mujeres durante la dictadura de Franco.",
   },
   {
     title: "Ser Mujer en la Francia de Vichy",
-    image: "public/Taller_5.jpg",
+    image: "/Taller_5.jpg",
     description: "Exploración de la situación femenina en la Francia ocupada.",
   },
   {
     title: "Ser Mujer en la URSS",
-    image: "public/Taller_6.jpg",
+    image: "/Taller_6.jpg",
     description:
       "Análisis del papel de la mujer en la Unión Soviética bajo Stalin.",
   },
