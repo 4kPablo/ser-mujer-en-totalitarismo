@@ -1,9 +1,9 @@
 import React from "react";
 import { ExternalLink } from "lucide-react";
 
-export default function Footer() {
+export default function Footer({ isTransparent }) {
   return (
-    <footer className="py-4">
+    <footer className={`py-4 ${isTransparent ? "bg-transparent" : "bg-white"}`}>
       <div className="container mx-auto px-4 text-center">
         <p className="mb-2">
           &copy; 2024 Alejandra Marcelli. Todos los derechos reservados.
