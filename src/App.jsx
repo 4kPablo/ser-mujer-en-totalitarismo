@@ -1,24 +1,37 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import LandingPage from "./pages/LandingPage";
-
+import SerMujerTotalitarismos from "./pages/SerMujerTotalitarismos";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Footer from "./components/Footer";
+import Navbar from "./components/Navbar";
 import "./globals.css";
 
 export default function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="flex flex-col min-h-screen animated-gradient">
+        {/* <Navbar /> */}
+        <main className="flex-grow">
+          <Routes>
+            <Route path="/" element={<LandingPage />} />
+            <Route
+              path="/ser-mujer-totalitarismos"
+              element={<SerMujerTotalitarismos />}
+            />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </BrowserRouter>
   );
 }
 
 function NotFound() {
   return (
-    <div className="justify-center text-center mt-12">
-      <h1 className="text-7xl py-[20%]">404</h1>
+    <div className="flex flex-col items-center justify-center w-full h-full">
+      <h1 className="text-7xl mb-4">404</h1>
+      <h2 className="text-xl">Página no encontrada</h2>
     </div>
   );
 }

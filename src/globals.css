@@ -69,6 +69,7 @@
   display: none;
 }
 
+/* Fondo de landing page */
 .animated-gradient {
   background: radial-gradient(at 0% 0%, #3498db, transparent 50%),
     radial-gradient(at 100% 0%, #2ecc71, transparent 50%),
@@ -87,5 +88,34 @@
   }
   100% {
     background-position: 0% 0%;
+  }
+}
+
+/* Fondo del taller "Ser Mujer" */
+.embers-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+.ember {
+  position: absolute;
+  bottom: -10px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  opacity: 0.7;
+  animation: rise linear infinite;
+}
+@keyframes rise {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0);
+    opacity: 0;
   }
 }
