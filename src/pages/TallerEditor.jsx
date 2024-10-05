@@ -77,7 +77,7 @@ export default function TalleresEditor() {
       <div className="bg-black">
         <div className="flex container justify-between items-center text-white h-14 py-2 px-1 text-sm">
           <div className="flex-1">
-            <Link to="/" className="hidden lg:flex">
+            <Link to="/admin" className="hidden lg:flex">
               <Button className="text-gray-300" variant="link">
                 <Undo2 className="mr-1 h-4 w-4" />
                 Volver

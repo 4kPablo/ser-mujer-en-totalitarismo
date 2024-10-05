@@ -55,7 +55,9 @@ export default function AdminPage() {
     <div>
       <div className="container mx-auto px-4 py-8">
         <header className="text-center mb-12">
-          <h1 className="text-5xl font-bold mb-4 tracking-tight">Admin page</h1>
+          <h1 className="text-5xl font-bold mb-4 tracking-tight">
+            Modo edición
+          </h1>
           <p className="text-xl max-w-2xl mx-auto">
             Dashboard para cambiar datos de la página web
           </p>

@@ -4,7 +4,7 @@ import AdminPage from "./pages/AdminPage";
 import SerMujer from "./pages/SerMujer";
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
 import Footer from "./components/Footer";
-import Navbar from "./components/Navbar";
+// import Navbar from "./components/Navbar";
 import "./globals.css";
 import TalleresEditor from "./pages/TallerEditor";
 
