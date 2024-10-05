@@ -61,7 +61,7 @@
 }
 
 * {
-  transition: all 150ms ease-out;
+  /* transition: all 150ms ease-out; */
   font-family: "Inter", sans-serif;
 }
 
