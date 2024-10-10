@@ -2,16 +2,19 @@ import React from "react";
 import LandingPage from "./pages/LandingPage";
 import AdminPage from "./pages/AdminPage";
 import SerMujer from "./pages/SerMujer";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import TalleresEditor from "./pages/TallerEditor";
 import Footer from "./components/Footer";
+import { Toaster } from "@/components/ui/toaster";
+import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+// import CargarDatos from "../public/CargarDatos";
 // import Navbar from "./components/Navbar";
 import "./globals.css";
-import TalleresEditor from "./pages/TallerEditor";
 
 function AppContent() {
   const location = useLocation();
   const isLandingPage = location.pathname === "/";
   const isAdminPage = location.pathname === "/admin";
+  // CargarDatos();
 
   return (
     <div className="flex flex-col min-h-screen animated-gradient">
@@ -25,6 +28,7 @@ function AppContent() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </main>
+      <Toaster />
       <Footer isTransparent={isLandingPage | isAdminPage} />
     </div>
   );

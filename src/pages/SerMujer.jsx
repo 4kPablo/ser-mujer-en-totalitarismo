@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Spinner } from "@/components/ui/spinner";
 import {
   Dialog,
   DialogContent,
@@ -10,13 +11,21 @@ import {
   DialogFooter,
 } from "@/components/ui/dialog";
 import { Calendar, Clock, MapPin, Undo2 } from "lucide-react";
-import { talleres } from "../../public/talleres";
-import { Link } from "react-router-dom";
 import { FaWhatsapp as WhatsApp } from "react-icons/fa";
+import { getTalleres } from "../../public/talleres";
+import { Link } from "react-router-dom";
 
 export default function SerMujer() {
   const [selectedTaller, setSelectedTaller] = useState(null);
-  const taller = talleres[0]; // Selecciona el primer taller del array
+  const [taller, setTaller] = useState(null);
+
+  useEffect(() => {
+    const fetchTaller = async () => {
+      const talleres = await getTalleres();
+      setTaller(talleres[0]); // Selecciona el primer taller del array
+    };
+    fetchTaller();
+  }, []);
 
   const handleWhatsAppClick = (title) => {
     const message = encodeURIComponent(
@@ -24,6 +33,13 @@ export default function SerMujer() {
     );
     window.open(`https://wa.me/5491158512939?text=${message}`, "_blank");
   };
+
+  if (!taller)
+    return (
+      <div className="flex justify-center min-h-screen">
+        <Spinner>Cargando taller...</Spinner>
+      </div>
+    ); // Muestra un loader mientras se cargan los datos
 
   return (
     <div className="min-h-screen bg-gray-100 text-gray-900">
@@ -109,7 +125,7 @@ export default function SerMujer() {
         </div>
       </footer>
       <Dialog
-        open={selectedTaller}
+        open={selectedTaller !== null}
         onOpenChange={() => setSelectedTaller(null)}
       >
         <DialogContent>

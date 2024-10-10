@@ -1,6 +1,12 @@
 import React from "react";
 import { ExternalLink } from "lucide-react";
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter,
+  Route,
+  Routes,
+  useLocation,
+  Link,
+} from "react-router-dom";
 
 export default function Footer({ isTransparent }) {
   const isAdmin =
@@ -13,21 +19,21 @@ export default function Footer({ isTransparent }) {
           &copy; 2024 Alejandra Marcelli. Todos los derechos reservados.
         </p>
         {isAdmin ? (
-          <a
-            href="/"
+          <Link
+            to="/"
             className="text-blue-600 hover:text-blue-700 transition-colors inline-flex items-center"
           >
             Volver al modo de usuario
             <ExternalLink className="ml-1 h-4 w-4" />
-          </a>
+          </Link>
         ) : (
-          <a
-            href="/admin"
+          <Link
+            to="/admin"
             className="text-blue-600 hover:text-blue-700 transition-colors inline-flex items-center"
           >
             Acceder al modo administrador
             <ExternalLink className="ml-1 h-4 w-4" />
-          </a>
+          </Link>
         )}
       </div>
     </footer>
